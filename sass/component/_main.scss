@@ -102,9 +102,6 @@ main {
         @include b.breakpoint(large) {
           width: 300px;
         }
-        @include b.breakpoint(tablet) {
-          width: 40%;
-        }
       }
       img:hover {
         scale: 1.1;

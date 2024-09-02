@@ -1,0 +1,112 @@
+@use "variables" as v;
+@use "function" as f;
+@use "mixins" as m;
+@use "breakpoints" as b;
+
+/* footer */
+
+footer {
+  background: v.$Very-Dark-Blue;
+  display: grid;
+  gap: f.rem(60);
+  grid-template-columns: repeat(auto-fit, minmax(210px, auto));
+  padding: 85px 6% 80px;
+  @include b.breakpoint(large) {
+      padding: 85px 2% 80px;
+      gap: f.rem(40);
+  }
+
+  .logo-phone-email {
+    .logo {
+      fill: v.$Light-Grayish-Blue;
+      color: v.$Light-Grayish-Blue;
+      background: v.$Desaturated-Blue;
+      margin-bottom: 25px;
+      padding: 10px;
+      border-radius: 5px;
+      width: f.rem(180);
+      height: f.rem(58);
+    }
+    ul {
+      display: inline;
+      li a {
+        img {
+          width: 22px;
+          margin-right: 15px;
+          height: auto;
+        }
+        display: flex;
+        font-size: f.rem(17);
+        font-weight: 700;
+        margin: 18px auto;
+        transition: 0.5s ease-in-out;
+        color: v.$Light-Grayish-Blue;
+      }
+      a:hover {
+        color: v.$Bright-Blue;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .more {
+    ul {
+      display: inline;
+      li a {
+        font-size: f.rem(17);
+        display: flex;
+        font-weight: 700;
+        margin: 18px auto;
+        transition: 0.5s ease-in-out;
+        color: v.$Light-Grayish-Blue;
+      }
+      a:hover {
+        color: v.$Bright-Blue;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .team {
+    ul {
+      display: inline;
+      li a {
+        font-size: f.rem(17);
+        display: flex;
+        font-weight: 700;
+        margin: 18px auto;
+        transition: 0.5s ease-in-out;
+        color: v.$Light-Grayish-Blue;
+      }
+      a:hover {
+        color: v.$Bright-Blue;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .social {
+    width: 100%;
+    text-align: center;
+    ul {
+        text-align: center;
+      display: inline-flex;
+      li a i {
+        text-align: center;
+        font-size: f.rem(18);
+        display: flex;
+        font-weight: 700;
+        margin: auto 18px;
+        padding: 11px 13px;
+        border-radius: 50%;
+        border: 2px solid v.$Light-Grayish-Blue;
+        transition: 0.5s ease-in-out;
+        color: v.$Light-Grayish-Blue;
+      }
+      i:hover {
+        color: v.$Bright-Blue;
+        background: v.$Light-Grayish-Blue;
+      }
+    }
+  }
+}

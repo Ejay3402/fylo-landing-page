@@ -1,0 +1,51 @@
+@use "function" as f;
+@use "variables" as v;
+@use "breakpoints" as b;
+//grid
+
+@mixin desktop-grid() {
+    width: 100%;
+    display: grid;
+    gap: f.rem(35);
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+}
+
+@mixin mob-grid() {
+    grid-template-columns: 1fr;
+}
+
+//button 
+
+@mixin button() {
+    background: v.$Bright-Blue;
+    padding: 7px 23px;
+    color: v.$Light-Grayish-Blue;
+    border: none;
+    font-size: f.rem(18);
+    font-weight: 700;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    transition: .800s ease-in-out;
+    @include b.breakpoint(large) {
+        padding: 5px 8px;
+    }
+}
+
+@mixin button-hover() {
+    background: v.$Desaturated-Blue;
+}
+
+//input
+
+@mixin input() {
+    width: 280px;
+    font-weight: 700;
+    font-size: f.rem(18);
+    border: 2px solid #888;
+    border-radius: 7px;
+    margin-right: 17px;
+    padding: 7px 10px;
+}

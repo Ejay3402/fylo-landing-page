@@ -1,0 +1,14 @@
+@use "function" as f;
+//break-points 
+
+$break-point : (
+    "large" : f.rem(1094),
+    "tablet" : f.rem(939),  
+    "phone" : f.rem(500),  
+);
+
+@mixin breakpoint($val) {
+    @media (max-width: map-get($break-point , $val)) {
+        @content;
+    }
+}

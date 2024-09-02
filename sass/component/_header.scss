@@ -1,0 +1,52 @@
+@use "variables" as v;
+@use "function" as f;
+@use "breakpoints" as b;
+/* header */
+
+header {
+
+  nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: f.rem(40) 5px;
+    @include b.breakpoint(tablet) {
+      padding: 20px 3px;
+    }
+    img {
+      width: f.rem(110);
+      height: f.rem(38);
+      margin-left: f.rem(70);
+      @include b.breakpoint(large) {
+        margin-left: f.rem(30);
+      }
+      @include b.breakpoint(tablet) {
+        margin-left: f.rem(15);
+      }
+      @include b.breakpoint(phone) {
+        width: f.rem(68);
+        margin-left: f.rem(8);
+      }
+    }
+    ul {
+      display: flex;
+      margin-right: f.rem(30);
+      @include b.breakpoint(large) {
+        margin-right: f.rem(15);
+      }
+      li a {
+        margin: 0 15px;
+        font-weight: 700;
+        color: v.$Very-Dark-Blue;
+        font-size: f.rem(20);
+        @include b.breakpoint(large) {
+          font-size: f.rem(17);
+        }
+        @include b.breakpoint(phone) {
+          font-size: f.rem(13);
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+}
